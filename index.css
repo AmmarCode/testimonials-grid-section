@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Outfit&display=swap');
+
+:root {
+    background-color: hsl(0, 0%, 81%);
+    font-size: 13px;
+    height: 100vh;
+    width: 100vw;
+}
+
+*, 
+*::after, 
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+h1, 
+h2, 
+h3 {
+    font-weight: 600;
+}
+
+p {
+    font-weight: 500;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-gap: 1.5rem;
+
+    padding-block: 2rem;
+    width: min(100%, 90rem);
+    margin-inline: auto;
+}
+
+.testimonial {
+    /* margin: 2rem; */
+    padding: 2rem;
+    border-radius: .7rem;
+}
+
+.flex {
+    display: flex;
+    justify-content:flex-start;
+}
+
+img {
+    border-radius: 50%;
+    border-style: solid;
+    margin: 0 1.5rem 0 0;
+    width: 3rem;    
+}
+
+.name {
+    margin: .3rem 0 0 0;
+}
+
+.position {
+    opacity: 50%;
+}
+
+.bold-p-light {
+    color: hsl(0, 0%, 100%);
+    margin: 1.3rem 0;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.bold-p-dark {
+    color: hsl(217, 19%, 35%);
+    margin: 1.3rem 0;
+}
+
+.norm-p {
+    opacity: 70%;
+    line-height: 1.5;
+}
+
+/* Dan */
+.dan {
+    background-color: hsl(263, 55%, 52%);
+    color: hsl(0, 0%, 100%); 
+}
+
+.pic.dan {
+    border-color: hsl(263, 55%, 70%);
+}
+
+.name.dan,
+.position.dan,
+.norm-p.dan {
+    color: hsl(0, 0%, 81%);
+}
+
+.bold-p-light.dan {
+    position: relative;
+    z-index: 10;
+}
+
+.bold-p-light.dan::before {
+    content: url(./images/bg-pattern-quotation.svg);
+    position: absolute;
+    top: -6.5rem;
+    right: 3rem;
+    z-index: -1;
+}
+
+/* Jon */
+.jon {
+    background-color: hsl(217, 19%, 35%);
+}
+
+.pic.jon {
+    border-color: hsl(217, 19%, 35%);
+}
+
+.name.jon {
+    color: hsl(0, 0%, 100%);
+}
+
+.position.jon,
+.norm-p.jon {
+    color:  hsl(0, 0%, 81%);
+}
+
+/* Jea */
+.jea {
+    background-color: hsl(0, 0%, 100%); 
+}
+
+.pic.jea {
+    border-color: hsl(0, 0%, 100%); 
+}
+
+.name.jea {
+    color: hsl(217, 19%, 35%)
+}
+
+.position.jea, 
+.norm-p.jea {
+    color:  hsl(219, 29%, 14%);
+}
+
+/* Pat */
+.pat {
+    background-color: hsl(219, 29%, 14%);
+}
+
+.pic.pat {
+    border-color: hsl(263, 55%, 52%);
+}
+
+.name.pat,
+.position.pat,
+.norm-p.pat {
+    color: hsl(0, 0%, 100%); 
+}
+
+/* Kir */
+.kir {
+    background-color: hsl(0, 0%, 100%); 
+}
+
+.pic.kir {
+    border-color: hsl(0, 0%, 100%); 
+}
+
+.name.kir {
+    color: hsl(217, 19%, 35%)
+}
+
+.position.kir,
+.norm-p.kir {
+    color:  hsl(219, 29%, 14%);
+}
+
+
+@media (min-width: 60em) {
+    .testimonial-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .jea {
+        background-color: hsl(0, 0%, 100%); 
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    .pat {
+        background-color: hsl(219, 29%, 14%);
+        grid-column-start:2;
+        grid-column-end: 4;
+    }
+
+    .kir {
+        background-color: hsl(0, 0%, 100%); 
+        grid-column-start: 4;
+        grid-row-start: 1;
+        grid-row-end: span 2;
+    }
+
+    .grid-col-span-2 {
+        grid-column: span 2;
+    }
+
+    .bold-p-light.dan::before {
+        content: url(./images/bg-pattern-quotation.svg);
+        position: absolute;
+        top: -6.5rem;
+        right: 5rem;
+        z-index: -1;
+    }
+}
